@@ -1,5 +1,17 @@
 import React from "react";
-import { View, StyleSheet, Text, Button } from 'react-native';
+import {
+  View,
+  StyleSheet,
+  Text,
+  Button
+}
+  from 'react-native';
+import {
+  Text,
+  Input,
+  Button
+}
+  from "react-native-elements";
 
 const SignupScreen = ({ navigation }) => {
   return (
