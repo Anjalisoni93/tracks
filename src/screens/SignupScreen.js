@@ -26,6 +26,7 @@ const SignupScreen = ({ navigation }) => {
         label="Password"
         value={password}
         onChangeText={setPassword}
+        secureTextEntry
       />
       <Spacer>
         <Button title="Sign Up" />
