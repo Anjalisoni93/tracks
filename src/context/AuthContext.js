@@ -10,11 +10,19 @@ const authReducer = (state, action) => {
 const signup = (dispatch) => {
   return ({ email, password }) => {
     // make API request to signup with that email and password
-    
+
     // if we sign up, moify our state, ans say that we are authenticated
 
     // if signing up fails, we probably need to reflect an error message somewhere
 
+  };
+};
+
+const signin = (dispatch) => {
+  return ({ enail, password }) => {
+    // try to signin 
+    // Handle success by updating state
+    // Handle failure by showing error message
   };
 };
 
