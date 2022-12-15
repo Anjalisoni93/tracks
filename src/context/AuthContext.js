@@ -22,6 +22,9 @@ const signup = (dispatch) => async ({ email, password }) => {
       type: 'signup',
       payload: response.data.token
     });
+
+    // navigate to main flow
+    
   } catch (err) {
     dispatch({
       type: 'add_error',
