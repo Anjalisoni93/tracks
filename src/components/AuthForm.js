@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { View, StyleSheet } from "react-native";
 import { Text, Button, Input } from "react-native-elements";
 
-const AuthForm = () => {
+const AuthForm = ({ headerText, errorMessage, onSubmit, submitButtonText }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -28,10 +28,15 @@ const AuthForm = () => {
         secureTextEntry
       />
       {state.errorMessage ? (
-        <Text style={styles.errorMessage}>{state.errorMessage}</Text>
+        <Text
+          style={styles.errorMessage}>{state.errorMessage}
+        </Text>
       ) : null}
       <Spacer>
-        <Button title="Sign Up" onPress={() => signup({ email, password })} />
+        <Button
+          title="Sign Up"
+          onPress={() => signup({ email, password })}
+        />
       </Spacer>
     </>
   );
