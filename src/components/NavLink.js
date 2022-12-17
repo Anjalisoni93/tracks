@@ -3,16 +3,22 @@ import { Text, TouchableOpacity, StyleSheet } from "react-native-elements";
 import Spacer from "./Spacer";
 import { withNavigation } from "react-navigation";
 
-const NavLink = ({ navigation }) => {
+const NavLink = ({ navigation, text, routeName }) => {
   return (
-    <TouchableOpacity onPress={() => navigation.navigate('Signin')}>
-        <Spacer>
-          <Text style={styles.link}>Already have an account? Sign in instead</Text>
-        </Spacer>
-      </TouchableOpacity>
+    <TouchableOpacity onPress={() => navigation.navigate(routeName)}>
+      <Spacer>
+        <Text style={styles.link}>
+          {text}
+        </Text>
+      </Spacer>
+    </TouchableOpacity>
   );
 };
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  link: {
+    color: 'blue'
+  }
+});
 
 export default withNavigation(NavLink);
