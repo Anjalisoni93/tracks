@@ -1,11 +1,22 @@
 import React from "react";
 import { View, StyleSheet, Text } from 'react-native';
+import AuthForm from "../components/AuthForm";
+import NavLink from "../components/NavLink";
 
 const SigninScreen = () => {
   return (
-    <Text style={{ fontSize: 48 }}>
-      SigninScreen
-    </Text>
+    <View>
+      <AuthForm
+        headerText="Sign In to your Account"
+        errorMessage=""
+        onSubmit={() => {}}
+        submitButtonText="Sign In"
+      />
+      <NavLink
+        text="Don't have an account? Sign Up instead"
+        routeName="Signup"
+      />
+    </View>
   );
 };
 
