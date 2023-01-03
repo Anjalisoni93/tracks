@@ -34,13 +34,13 @@ const App = createAppContainer(switchNavigator);
 export default () => {
   return (
     <SafeAreaProvider>
-      <AuthProvider>
-        <App
-          ref={(navigator) => {
-            setNavigator(navigator)
-          }}
-        />
-      </AuthProvider>
+    <AuthProvider>
+      <App
+        ref={(navigator) => {
+          setNavigator(navigator)
+        }}
+      />
+    </AuthProvider>
     </SafeAreaProvider>
   );
 };
