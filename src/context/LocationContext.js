@@ -1,27 +1,32 @@
-import createDataContext from './createDataContext';
+import createDataContext from "./createDataContext";
 
 const locationReducer = (state, action) => {
   switch (action.type) {
-    case 'add_current_location':
+    case "add_current_location":
       return { ...state, currentLocation: action.payload };
+    case "start_recording":
+      return { ...state, recording: true };
     default:
       return state;
   }
 };
 
-const startRecording = dispatch => () => { };
-const stopRecording = dispatch => () => { };
-const addLocation = dispatch => (location) => {
-  dispatch({ type: 'add_current_location', payload: location })
+const startRecording = (dispatch) => () => {
+  dispatch({ type: "start_recording" });
 };
+const stopRecording = (dispatch) => () => {
 
+};
+const addLocation = (dispatch) => (location) => {
+  dispatch({ type: "add_current_location", payload: location });
+};
 
 export const { Context, Provider } = createDataContext(
   locationReducer,
   {
     startRecording,
     stopRecording,
-    addLocation
+    addLocation,
   },
   { recording: false, locations: [], currentLocation: null }
 );
