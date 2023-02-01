@@ -9,7 +9,6 @@ const TrackForm = () => {
         <Input placeholder="Enter Name" />
       </Spacer>
       <Button title="Start Recording" />
-      <Button title="STart Recording" />
     </>
   );
 };
